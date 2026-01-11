@@ -19,7 +19,7 @@ use Illuminate\Foundation\Testing\WithCachedRoutes;
 
 pest()->extend(Tests\TestCase::class)
     ->use(RefreshDatabase::class, WithCachedConfig::class, WithCachedRoutes::class)
-    ->in('Feature', 'Unit');
+    ->in('Browser', 'Feature', 'Unit');
 
 /*
 |--------------------------------------------------------------------------
