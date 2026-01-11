@@ -13,9 +13,13 @@ declare(strict_types=1);
 |
 */
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithCachedConfig;
+use Illuminate\Foundation\Testing\WithCachedRoutes;
+
 pest()->extend(Tests\TestCase::class)
- // ->use(Illuminate\Foundation\Testing\RefreshDatabase::class)
-    ->in('Feature');
+    ->use(RefreshDatabase::class, WithCachedConfig::class, WithCachedRoutes::class)
+    ->in('Feature', 'Unit');
 
 /*
 |--------------------------------------------------------------------------
